@@ -69,6 +69,20 @@ h1 {
     margin: 0 auto;
 }
 
+.badge-estado {
+    display: inline-block;
+    background-color: rgba(var(--acento-rgb), 0.1);
+    color: var(--texto-acento);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid rgba(var(--acento-rgb), 0.2);
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+    width: fit-content;
+}
+
 .hero {
     padding: 5.5rem 0 15rem 0;
     display: flex;
