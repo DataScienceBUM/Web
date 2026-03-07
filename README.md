@@ -20,14 +20,6 @@ Nuestra metodología se apoya en las herramientas líderes del mercado:
 - **Automatización:** VBA & Office Automation.
 - **Business Intelligence:** PowerBI, Tableau, Excel Avanzado.
 
-## 🚀 Instalación y Uso
-
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/DataScienceBUM/Web.git
-   ```
-2. Abre el archivo `index.html` en tu navegador favorito.
-
 ---
 
 Desarrollado con ❤️ por **DataScienceBUM**
