@@ -1,0 +1,209 @@
+:root {
+    --fondo: #0a1416;
+    --texto-acento: #00e0f0;
+    --texto-principal: #f8fafc;
+    --texto-secundario: #64748b;
+    /* Versión RGB para poder usar transparencias */
+    --acento-rgb: 0, 224, 240;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--fondo);
+    background-image:
+        radial-gradient(circle at 5% 55%, rgba(var(--acento-rgb), 0.15) 0%, rgba(var(--acento-rgb), 0.02) 55%, transparent 80%);
+    background-size: 100% 100%, 45px 45px;
+    background-attachment: fixed;
+    color: var(--texto-principal);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    margin-bottom: 3rem;
+}
+
+nav a {
+    color: var(--texto-principal);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.header-principal {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(var(--acento-rgb), 0.1);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(var(--acento-rgb), 0.1);
+}
+
+h1 {
+    font-weight: 800;
+    letter-spacing: -1px;
+    font-size: 3.5rem;
+}
+
+.texto-acento {
+    color: var(--texto-acento);
+}
+
+.texto-principal {
+    color: var(--texto-principal);
+}
+
+.texto-secundario {
+    color: var(--texto-secundario);
+}
+
+.contenedor-principal {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero {
+    padding: 5.5rem 0 15rem 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.hero-introduccion {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+
+.hero-imagenes {
+    position: relative;
+    width: 45%;
+    min-height: 400px;
+    display: block;
+    margin: 40px;
+}
+
+.crecimiento-ingresos {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    z-index: 2;
+    filter: drop-shadow(0 0 20px rgba(0, 224, 240, 0.1));
+    animation: flotando 6s ease-in-out infinite;
+}
+
+.actividad-nodos {
+    position: absolute;
+    width: 225px;
+    bottom: 25px;
+    left: 10px;
+    z-index: 1;
+    filter: drop-shadow(0 0 20px rgba(0, 224, 240, 0.1));
+    animation: parpadeando 3s ease-in-out infinite;
+}
+
+.botones-hero {
+    display: flex;
+    gap: 1rem;
+}
+
+.boton-principal {
+    background-color: var(--texto-acento);
+    color: var(--fondo);
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 14px rgba(var(--acento-rgb) 0.3);
+    transition: all 0.3s ease;
+}
+
+.boton-principal:hover {
+    transform: translateY(-2px);
+    /*lo mueve hacía arriba*/
+    box-shadow: 0 5px 15px rgba(var(--acento-rgb) 0.3);
+    /*hace un resplandor en el boton*/
+    filter: brightness(1.1)
+        /*hace que brille un poco más*/
+}
+
+.boton-secundario {
+    background-color: transparent;
+    color: var(--texto-principal);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.473);
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.boton-secundario:hover {
+    transform: translateY(-2px);
+}
+
+.estudios-casos {
+    padding: 5rem 0;
+}
+
+.herramientas-contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contenedor-stack {
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.contenedor-stack h2 {
+    font-size: 2rem;
+    color: var(--texto-acento);
+}
+
+.herramientas {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: transparent;
+    gap: 10px;
+    filter: drop-shadow(0 0 20px rgba(0, 224, 240, 0.3));
+}
+
+.herramientas img {
+    height: 40px;
+}
+
+@keyframes flotando {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes parpadeando {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

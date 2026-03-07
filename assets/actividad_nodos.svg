@@ -1,0 +1,17 @@
+<svg width="320" height="180" viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="180" rx="16" fill="#0A1416" fill-opacity="0.8" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  <rect width="300" height="140" x="10" y="10" fill="url(#dotPattern)" rx="10" opacity="0.3"/>
+  <defs>
+    <pattern id="dotPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="0.5" fill="rgba(255,255,255,0.1)" />
+    </pattern>
+  </defs>
+  <text x="25" y="40" fill="#64748B" font-family="monospace" font-size="10" font-weight="700" letter-spacing="1">ACTIVIDAD DE NODOS NEURALES</text>
+  <rect x="25" y="60" width="12" height="60" rx="4" fill="#00E0F0" fill-opacity="0.6" />
+  <rect x="42" y="80" width="12" height="40" rx="4" fill="#00E0F0" fill-opacity="0.8" />
+  <rect x="59" y="70" width="12" height="50" rx="4" fill="#00E0F0" fill-opacity="1" />
+  <rect x="76" y="90" width="12" height="30" rx="4" fill="#00E0F0" fill-opacity="0.4" />
+  <rect x="93" y="60" width="12" height="60" rx="4" fill="#00E0F0" fill-opacity="0.9" />
+  <rect x="110" y="75" width="12" height="45" rx="4" fill="#00E0F0" fill-opacity="0.7" />
+  <text x="25" y="150" fill="#f8fafc" font-family="monospace" font-size="14" font-weight="700">Estado: <tspan fill="#00E0F0" fill-opacity="0.8">Optimizando...</tspan></text>
+</svg>
