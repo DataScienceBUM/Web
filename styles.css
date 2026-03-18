@@ -37,6 +37,11 @@ nav {
 
 .inicio {
     font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.inicio:hover {
+    transform: translateY(-2px);
 }
 
 nav a {
