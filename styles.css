@@ -7,6 +7,10 @@
     --acento-rgb: 0, 224, 240;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -18,12 +22,21 @@ body {
     color: var(--texto-principal);
 }
 
+
+section {
+    scroll-margin-top: 140px;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 0;
-    margin-bottom: 3rem;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.inicio {
+    font-size: 1rem;
 }
 
 nav a {
@@ -103,6 +116,11 @@ h1 {
     display: flex;
     flex-direction: column;
     width: 55%;
+    padding: 0px 25px 0px 0px;
+
+    >p {
+        text-align: justify;
+    }
 }
 
 .hero-imagenes {
@@ -124,12 +142,12 @@ h1 {
 
 .actividad-nodos {
     position: absolute;
-    width: 50%;
-    bottom: 25px;
+    width: 55%;
+    bottom: 0px;
     left: 10px;
     z-index: 1;
     filter: drop-shadow(0 0 20px rgba(0, 224, 240, 0.1));
-    animation: parpadeando 3s ease-in-out infinite;
+    animation: parpadeando 3.5s ease-in-out infinite;
 }
 
 .botones-hero {
@@ -177,8 +195,147 @@ h1 {
     transform: translateY(-2px);
 }
 
-.estudios-casos {
-    padding: 5rem 0;
+.proyectos-contenido {
+    margin: 30px 0;
+    text-align: justify;
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .texto-secundario {
+        font-size: 2rem;
+    }
+}
+
+
+.lista-proyectos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+
+}
+
+.proyecto-estrella {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.1rem;
+    border: 1px solid rgba(var(--acento-rgb), 0.25);
+    border-radius: 20px;
+
+    * {
+        padding: 0 10px;
+        font-size: 1.2rem;
+    }
+
+    .logo-proyecto {
+        height: auto;
+
+        img {
+            max-width: 300px;
+        }
+    }
+
+    .nombre-proyecto {
+        font-size: 2rem;
+    }
+
+
+}
+
+.nombre-proyecto {
+    font-size: auto;
+    text-align: center;
+    background-color: rgba(var(--acento-rgb), 0.25);
+    color: var(--texto-principal);
+    border-radius: 19px 19px 0 0;
+    margin: 0;
+}
+
+.logo-proyecto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+
+    img {
+        width: 100%;
+        max-width: 150px;
+        max-height: 100%;
+        object-fit: contain;
+    }
+}
+
+.proyecto-ver-mas {
+    font-size: 1.2rem;
+    background-color: var(--texto-acento);
+    color: var(--texto-principal);
+    border-radius: 19px;
+    width: 25%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    margin: auto auto 15px auto;
+}
+
+.proyecto-ver-mas:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(var(--acento-rgb), 0.3);
+    filter: brightness(1.1);
+}
+
+.proyecto {
+    /* Toma casi la mitad del espacio, dejando margen para el gap */
+    width: calc(50% - 1rem);
+    /* Si quieres podemos dejar una altura máxima menor, como 550px */
+    max-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1.1rem;
+    border: 1px solid rgba(var(--acento-rgb), 0.25);
+    border-radius: 20px;
+    /* Evita que el contenido desborde el alto máximo */
+    overflow: hidden;
+
+    * {
+        padding: 0 10px;
+    }
+}
+
+/* Agregamos una barra de scroll para el contenido si es muy largo */
+.proyecto .aspecto-proyecto {
+    overflow-y: auto;
+    /* Personaliza el scroll para que se vea más estético */
+    scrollbar-width: thin;
+    scrollbar-color: var(--texto-acento) transparent;
+}
+
+.aspecto-proyecto {
+    text-align: justify;
+}
+
+.imagen-proyectos {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    border-radius: 12px;
+    filter: drop-shadow(0 0 20px rgba(0, 224, 240, 0.2));
+}
+
+.proyectos-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    font-size: 1.5rem;
 }
 
 .herramientas-contenedor {
@@ -209,6 +366,7 @@ h1 {
 .herramientas img {
     height: 40px;
 }
+
 
 @keyframes flotando {
     0% {

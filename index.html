@@ -12,11 +12,13 @@
     <header class="header-principal">
         <nav class="contenedor-principal">
             <div>
-                <h2 class="texto-acento">DATASCIENCE<span class="texto-principal">BUM</span></h2>
+                <a href="#" class="inicio">
+                    <h2 class="texto-acento">DATASCIENCE<span class="texto-principal">BUM</span></h2>
+                </a>
             </div>
             <div>
-                <a href="" class="enlace-navegacion">Proyectos</a>
-                <a href="" class="enlace-navegacion">Stack</a>
+                <a href="#proyectos" class="enlace-navegacion">Proyectos</a>
+                <a href="#stack" class="enlace-navegacion">Stack</a>
                 <a href="" class="enlace-navegacion">Blog</a>
             </div>
             <a href="#contactar" class="boton-principal">Contactar</a>
@@ -31,13 +33,15 @@
                             inteligentes</span>
                     </h1>
                     <p class="texto-secundario">Adaptamos la ciencia de datos a tu negocio, sin
-                        importar el tamaño de la empresa <span>llevamos tu proceso actual hacia flujos de trabajos
-                            automatizados que te permitan tomar decisiones más rápidas y fundamentadas.</span></p>
+                        importar el tamaño de la empresa llevamos tu proceso actual hacia flujos de trabajos
+                        automatizados que te permitan tomar decisiones más rápidas y fundamentadas.</p>
                     <div class="botones-hero">
-                        <a class="boton-principal" href="#estudios-caso">Ver estudios de caso</a>
-                        <a class="boton-principal">Stack Tecnológico</a>
-                        <a class="boton-secundario">Github</a>
-                        <a class="boton-secundario">LinkedIn</a>
+                        <a class="boton-principal" href="./assets/Curriculum.pdf" download="Brandon Urroz.pdf">Descargar
+                            CV</a>
+                        <a class="boton-principal" href="#stack">Stack Tecnológico</a>
+                        <a class="boton-secundario" href="https://github.com/DataScienceBUM" target="_blank">Github</a>
+                        <a class="boton-secundario" href="https://www.linkedin.com/in/brandon-urroz-mayen-28260b182/"
+                            target="_blank">LinkedIn</a>
                     </div>
                 </div>
                 <div class="hero-imagenes">
@@ -45,13 +49,110 @@
                     <img src="./assets/crecimiento_ingresos.svg" alt="Gráfico de crecimiento de ingresos"
                         class="crecimiento-ingresos">
                 </div>
-            </section id="hero" class="hero">
-            <div id="estudios-caso" class="estudios-caso">
-                <h2>Estudios de caso</h2>
-                <span class="texto-secundario">Problemas del mundo real resueltos con alta fidelidad y adaptabilidad a
-                    lo que necesitas.</span>
-            </div>
-            <div id="stack" class="contenedor-stack">
+            </section>
+            <section id="proyectos" class="proyectos">
+                <div class="proyectos-contenido">
+                    <h2>Proyectos</h2>
+                    <p class="texto-secundario">Soluciones tecnológicas diseñadas para resolver desafíos operativos
+                        reales. Desde la automatización integral de procesos hasta la generación de analítica avanzada,
+                        nuestros proyectos están enfocados en optimizar tu tiempo, maximizar la eficiencia de tu equipo
+                        y brindarte los datos exactos que necesitas para tomar decisiones estratégicas.</p>
+                </div>
+                <div class="lista-proyectos">
+                    <div class="proyecto-estrella">
+                        <h3 class="nombre-proyecto">Bot Poder Judicial</h3>
+                        <a href="https://pjenlinea.poder-judicial.go.cr/GestionEnLinea/inicio/tramitesfrecuentes"
+                            target="_blank" class="logo-proyecto"><img src="./assets/logo-poder-judicial.png"
+                                alt="Logo del Poder Judicial"></a>
+                        <div class="aspecto-proyecto">
+                            <h4 class="titulo-aspecto">Automatización de procesos</h4>
+                            <p class="contenido-aspecto">Transformamos la carga operativa del equipo mediante la
+                                implementación de un bot especializado que asume las tareas manuales y repetitivas. Este
+                                sistema interactúa directamente con los portales legales para automatizar la descarga de
+                                documentos, la presentación de demandas y la extracción de datos críticos (como
+                                retenciones, autorizaciones y fechas de última gestión por la parte actora o el
+                                juzgado). Al delegar esta recolección de información, los asistentes se liberan de la
+                                operatividad básica para enfocar su tiempo y experiencia en el análisis y en tareas de
+                                mayor valor estratégico.</p>
+                        </div>
+                        <div class="aspecto-proyecto">
+                            <h4 class="titulo-aspecto">Añadido de valor</h4>
+                            <p class="contenido-aspecto">Más allá de la simple automatización de clics, el sistema
+                                genera un flujo de trabajo inteligente que procesa y estandariza la información
+                                obtenida. Entregamos datos limpios y estructurados que se integran directamente en la
+                                operativa del negocio, permitiendo la actualización automática de expedientes, la
+                                generación de reportes precisos en tiempo real y la creación de colas de trabajo
+                                priorizadas para el equipo.</p>
+                        </div>
+                        <div class="aspecto-proyecto">
+                            <h4 class="titulo-aspecto">Procesos Alternos y Herramientas para el Equipo</h4>
+                            <p class="contenido-aspecto">Entendemos que la tecnología debe empoderar al talento humano,
+                                no aislarlo. Para optimizar el tiempo de gestión, desarrollamos herramientas
+                                complementarias diseñadas específicamente para los asistentes legales. Estas soluciones
+                                los mantienen como una pieza activa y central del flujo de trabajo, dotándolos de los
+                                insumos exactos que necesitan para ejecutar sus tareas diarias, semanales o mensuales
+                                con una eficiencia sin precedentes.</p>
+                        </div>
+                        <a href="" class="proyecto-ver-mas">Ver más</a>
+                    </div>
+                    <div class="proyecto">
+                        <h3 class="nombre-proyecto">Bot TSE</h3>
+                        <a href="https://servicioselectorales.tse.go.cr/chc/consulta_cedula.aspx" target="_blank"
+                            class="logo-proyecto"><img src="https://www.tse.go.cr/imgs/iconos/logo-TSE.svg"
+                                alt="Logo del Proyecto"></a>
+                        <div class="aspecto-proyecto">
+                            <h4 class="titulo-aspecto">Del papel a lo digital</h4>
+                            <p class="contenido-aspecto">En el sector de seguros, la emisión de pólizas de riesgo
+                                requiere una verificación exhaustiva y precisa de la identidad de los asegurados y sus
+                                beneficiarios. Tradicionalmente, la recepción de esta información se da mediante insumos
+                                físicos, lo que genera cuellos de botella operativos en la digitalización y expone a los
+                                procesos a errores humanos de digitación o inconsistencias legales. El alto costo de los
+                                reprocesos y el riesgo de fraude hacen que la validación manual de estos expedientes sea
+                                insostenible y poco segura.</p>
+                        </div>
+                        <div class="aspecto-proyecto">
+                            <h4 class="titulo-aspecto">Información confiable </h4>
+                            <p class="contenido-aspecto">Es un proceso de digitalización y verificación automatizada
+                                diseñado para resolver este desafío. El desarrollo transforma los insumos físicos en
+                                datos estructurados y los audita directamente contra la base de datos del Tribunal
+                                Supremo de Elecciones (TSE). La herramienta corrobora la validez de las cédulas de
+                                identidad nacionales, cruzando y validando que los nombres brindados, tanto de titulares
+                                como de beneficiarios, concuerden de manera exacta con los registros oficiales,
+                                garantizando un proceso seguro, rápido y 100% confiable.</p>
+                        </div>
+                        <a href="https://github.com/DataScienceBUM/BotConsultaCivilesCR" target="_blank"
+                            class="proyecto-ver-mas">Ver más
+                        </a>
+                    </div>
+                    <div class="proyecto">
+                        <h3 class="nombre-proyecto">PriorityFlow Python-Excel</h3>
+                        <a href="#" target="_blank" class="logo-proyecto"><img src="./assets/pyexcel.png"
+                                alt="Logo del Proyecto"></a>
+                        <div class="aspecto-proyecto">
+                            <h4 class="titulo-aspecto">Reforzando el poder de Excel</h4>
+                            <p class="contenido-aspecto">PriorityFlow Python-Excel es un proceso de automatización
+                                avanzado que integra la potencia analítica de Python directamente en tu entorno de
+                                Excel, operando con la misma agilidad y transparencia que una macro nativa. Este
+                                desarrollo ejecuta de extremo a extremo la actualización de matrices de datos, genera
+                                clasificaciones dinámicas por prioridad y ordena de forma inteligente la carga de
+                                trabajo para su asignación a gestores, maximizando la eficiencia operativa sin abandonar
+                                la interfaz que tu equipo ya conoce.</p>
+                        </div>
+                        <div class="aspecto-proyecto">
+                            <h4 class="titulo-aspecto">¿Por qué Excel?</h4>
+                            <p class="contenido-aspecto">Excel es un estándar indiscutible en el entorno corporativo,
+                                operado por usuarios de todos los niveles técnicos. Entendiendo que la migración de los
+                                equipos hacia nuevas plataformas implica altos costos de transición y complejas curvas
+                                de aprendizaje, hemos optado por una solución más estratégica: llevar la potencia de
+                                Python directamente a la hoja de cálculo. De esta manera, el usuario interactúa con un
+                                entorno familiar y ejecuta procesos con la simplicidad de una macro tradicional, pero
+                                respaldado por la capacidad de procesamiento avanzado de Python.</p>
+                        </div>
+                        <a href="" class="proyecto-ver-mas">Ver más</a>
+                    </div>
+                </div>
+            </section>
+            <section id="stack" class="contenedor-stack">
                 <h2>Nuestra gama de herramientas</h2>
                 <div class="herramientas-contenedor">
                     <span class="herramientas"><img src="./assets/r.svg" alt="R">R </span>
@@ -63,7 +164,7 @@
                     <span class="herramientas"><img src="./assets/vba.svg" alt="Visual Basic for Application">VBA</span>
 
                 </div>
-            </div>
+            </section>
     </main>
     <footer></footer>
     </div>
