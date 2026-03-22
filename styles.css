@@ -371,6 +371,117 @@ h1 {
 }
 
 
+/* --- Estilos Contacto --- */
+.contactar {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.contacto-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 3rem;
+    align-items: center;
+}
+
+.tarjeta-contacto {
+    background: rgba(var(--acento-rgb), 0.05);
+    border: 1px solid rgba(var(--acento-rgb), 0.3);
+    border-radius: 20px;
+    padding: 2.5rem;
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 0 10px 30px rgba(0, 224, 240, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.tarjeta-contacto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 224, 240, 0.2);
+}
+
+.item-contacto {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.item-contacto:last-child {
+    margin-bottom: 0;
+}
+
+.icono-contacto {
+    background: rgba(var(--acento-rgb), 0.15);
+    color: var(--texto-acento);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    box-shadow: 0 0 15px rgba(0, 224, 240, 0.2);
+}
+
+.detalles-contacto h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    color: var(--texto-secundario);
+}
+
+.detalles-contacto p {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--texto-principal);
+    font-weight: bold;
+}
+
+.formulario-contacto {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+}
+
+.formulario-contacto label {
+    font-size: 1.1rem;
+    color: var(--texto-secundario);
+    font-weight: 500;
+}
+
+.formulario-contacto input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(var(--acento-rgb), 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--texto-principal);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.formulario-contacto input:focus {
+    border-color: var(--texto-acento);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 224, 240, 0.1);
+}
+
+.btn-enviar {
+    margin-top: 1rem;
+    align-self: flex-start;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
 @keyframes flotando {
     0% {
         transform: translateY(0px);
