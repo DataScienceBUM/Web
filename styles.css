@@ -509,3 +509,184 @@ h1 {
         opacity: 1;
     }
 }
+
+/* --- Estilos Página Detalle Bot Judicial --- */
+
+.detalle-hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6rem 0 4rem 0;
+    gap: 2rem;
+}
+
+.detalle-hero-texto {
+    flex: 1;
+    min-width: 300px;
+}
+
+.texto-destacado {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.detalle-hero-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+}
+
+.logo-detalle {
+    max-width: 100%;
+    height: auto;
+    max-height: 250px;
+    filter: drop-shadow(0 0 20px rgba(0, 224, 240, 0.2));
+    animation: flotando 6s ease-in-out infinite;
+}
+
+.seccion-diagrama, .seccion-capacidades, .seccion-arquitectura {
+    padding: 4rem 0;
+}
+
+.diagrama-contenedor {
+    background: rgba(10, 20, 22, 0.5);
+    border: 1px solid rgba(0, 224, 240, 0.2);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-top: 2rem;
+    overflow-x: auto;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.grid-capacidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tarjeta-capacidad {
+    background: rgba(0, 224, 240, 0.03);
+    border: 1px solid rgba(0, 224, 240, 0.15);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tarjeta-capacidad:hover {
+    transform: translateY(-5px);
+    background: rgba(0, 224, 240, 0.08);
+    border-color: rgba(0, 224, 240, 0.4);
+    box-shadow: 0 10px 20px rgba(0, 224, 240, 0.1);
+}
+
+.icono-capacidad {
+    color: var(--texto-acento);
+    background: rgba(0, 224, 240, 0.1);
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta-capacidad h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: var(--texto-principal);
+}
+
+.tarjeta-capacidad p {
+    margin: 0;
+    color: var(--texto-secundario);
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.arquitectura-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+    .arquitectura-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.lista-arquitectura {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.item-arquitectura {
+    display: flex;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--texto-acento);
+    transition: background 0.3s;
+}
+
+.item-arquitectura:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.item-icono {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.item-arquitectura h4 {
+    margin: 0 0 0.5rem 0;
+    color: var(--texto-principal);
+    font-size: 1.1rem;
+}
+
+.item-arquitectura p {
+    margin: 0;
+    color: var(--texto-secundario);
+    line-height: 1.5;
+}
+
+.tarjeta-conclusion {
+    background: linear-gradient(145deg, rgba(0, 224, 240, 0.1) 0%, rgba(10, 20, 22, 0.8) 100%);
+    border: 1px solid rgba(0, 224, 240, 0.3);
+    border-radius: 20px;
+    padding: 2.5rem;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tarjeta-conclusion h3 {
+    color: var(--texto-acento);
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+
+.tarjeta-conclusion p {
+    color: var(--texto-principal);
+    line-height: 1.7;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.mb-4 { margin-bottom: 1.5rem; }
+.mt-4 { margin-top: 1.5rem; }

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Judicial - DataScienceBUM</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'dark',
+            themeVariables: {
+                primaryColor: 'rgba(0, 224, 240, 0.1)',
+                primaryTextColor: '#f8fafc',
+                primaryBorderColor: '#00e0f0',
+                lineColor: '#00e0f0',
+                secondaryColor: '#00e0f0',
+                tertiaryColor: '#0a1416'
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <header class="header-principal">
+        <nav class="contenedor-principal">
+            <div>
+                <a href="index.html" class="inicio">
+                    <h2 class="texto-acento">DATASCIENCE<span class="texto-principal">BUM</span></h2>
+                </a>
+            </div>
+            <div>
+                <a href="index.html#proyectos" class="enlace-navegacion">Proyectos</a>
+                <a href="index.html#stack" class="enlace-navegacion">Stack</a>
+                <a href="index.html#contactar" class="enlace-navegacion">Blog</a>
+            </div>
+            <a href="index.html#contactar" class="boton-principal">Contactar</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contenedor-principal">
+            <section class="detalle-hero">
+                <div class="detalle-hero-texto">
+                    <span class="badge-estado">Automatización con R</span>
+                    <h1>Bot<span class="texto-acento">Judicial</span></h1>
+                    <p class="texto-secundario texto-destacado">
+                        Una solución avanzada de Automatización Robótica de Procesos (RPA) desarrollada íntegramente en
+                        lenguaje R.
+                        Su objetivo principal es interactuar de manera automatizada con el portal web del sistema
+                        judicial,
+                        simulando la interacción humana con alta fidelidad mediante RSelenium.
+                    </p>
+                </div>
+                <div class="detalle-hero-imagen">
+                    <img src="./assets/logo-poder-judicial.png" alt="Logo Poder Judicial" class="logo-detalle">
+                </div>
+            </section>
+
+            <section class="seccion-diagrama">
+                <h2>Arquitectura y <span class="texto-acento">Flujo de Trabajo</span></h2>
+                <p class="texto-secundario">El proyecto exhibe un nivel de madurez arquitectónica notable, separando la
+                    lógica de navegación de los flujos de negocio.</p>
+                <div class="diagrama-contenedor">
+                    <div class="mermaid">
+                        graph TD
+                        A[Módulo Principal / main.R] --> B{Autenticación y Sesión}
+                        B -->|Credenciales .Renviron| C[Portal Web Judicial]
+                        C --> D[Módulos de Scraping]
+                        C --> E[Gestión Documental]
+                        C --> F[Demandas Nuevas]
+
+                        D --> D1[Extracción de Partes]
+                        D --> D2[Retenciones y Autorizaciones]
+                        D --> D3[Detalles de Documentos]
+
+                        E --> E1[Descarga Masiva de Expedientes]
+                        E --> E2[Carga de Escritos Automatizada]
+
+                        F --> F1[Automatización de Formularios]
+                        F --> F2[Autocompletado y Validación]
+
+                        D1 --> G[Procesamiento ETL]
+                        D2 --> G
+                        D3 --> G
+
+                        G -->|Limpieza y Normalización| H[(Base de Datos MySQL)]
+
+                        style A fill:#0a1416,stroke:#00e0f0,stroke-width:2px,color:#f8fafc
+                        style C fill:#00e0f0,stroke:#00e0f0,stroke-width:2px,color:#0a1416
+                        style H fill:#0a1416,stroke:#00e0f0,stroke-width:2px,color:#f8fafc
+                    </div>
+                </div>
+            </section>
+
+            <section class="seccion-capacidades">
+                <h2>Capacidades y <span class="texto-acento">Módulos Principales</span></h2>
+                <div class="grid-capacidades">
+                    <div class="tarjeta-capacidad">
+                        <div class="icono-capacidad">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            </svg>
+                        </div>
+                        <h3>Extracción de Información</h3>
+                        <p>Consulta expedientes masivamente y extrae información vital. Incluye la obtención de las
+                            partes del expediente, retenciones financieras críticas, autorizaciones y detalles de los
+                            documentos adjuntos.</p>
+                    </div>
+                    <div class="tarjeta-capacidad">
+                        <div class="icono-capacidad">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="12" y1="18" x2="12" y2="12"></line>
+                                <line x1="9" y1="15" x2="15" y2="15"></line>
+                            </svg>
+                        </div>
+                        <h3>Gestión Documental</h3>
+                        <p>Permite la descarga masiva de todos los documentos asociados a una lista de expedientes.
+                            Automatiza la presentación de escritos legales, adjuntando PDFs firmados y validando
+                            estados.</p>
+                    </div>
+                    <div class="tarjeta-capacidad">
+                        <div class="icono-capacidad">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3>Presentación de Demandas</h3>
+                        <p>Automatiza la creación de una demanda desde cero. Llena datos generales, agrega
+                            intervinientes (físicos y jurídicos) y consulta bases de datos civiles para autocompletar
+                            identidades de forma dinámica.</p>
+                    </div>
+                    <div class="tarjeta-capacidad">
+                        <div class="icono-capacidad">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                            </svg>
+                        </div>
+                        <h3>Procesamiento (ETL)</h3>
+                        <p>Limpia datos no estructurados y sucios mediante <code>tidyverse</code> y
+                            <code>stringr</code>. Sincroniza con bases de datos MySQL usando un enfoque transaccional
+                            para asegurar la integridad de la información.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="seccion-arquitectura">
+                <div class="arquitectura-grid">
+                    <div class="arquitectura-info">
+                        <h2>Diseño de Software y <span class="texto-acento">Resiliencia</span></h2>
+                        <p class="texto-secundario mb-4">El BotJudicial está diseñado para liberar cientos de horas de
+                            trabajo manual, destacando por su flexibilidad y capacidad de recuperación ante fallos.</p>
+
+                        <div class="lista-arquitectura">
+                            <div class="item-arquitectura">
+                                <div class="item-icono">🛡️</div>
+                                <div>
+                                    <h4>Patrón Page Object Model (POM)</h4>
+                                    <p>Centraliza los selectores XPath/IDs. Si la web del juzgado cambia, solo se
+                                        actualiza un diccionario sin afectar la lógica del bot.</p>
+                                </div>
+                            </div>
+                            <div class="item-arquitectura">
+                                <div class="item-icono">⏱️</div>
+                                <div>
+                                    <h4>Manejo de Tiempos y Estado</h4>
+                                    <p>Robusto ante tiempos de carga lentos. Utiliza bucles y esperas explícitas para
+                                        asegurar que el DOM cargue completamente antes de interactuar.</p>
+                                </div>
+                            </div>
+                            <div class="item-arquitectura">
+                                <div class="item-icono">🚦</div>
+                                <div>
+                                    <h4>Control de Errores Activo</h4>
+                                    <p>Todos los procesos iterativos están envueltos en bloques `tryCatch`. Un
+                                        expediente con error no detiene el procesamiento masivo de los demás.</p>
+                                </div>
+                            </div>
+                            <div class="item-arquitectura">
+                                <div class="item-icono">💾</div>
+                                <div>
+                                    <h4>Checkpoints y Prevención de Pérdida</h4>
+                                    <p>Guarda el estado del proceso recurrentemente (`saveRDS`). Permite reanudar el
+                                        trabajo desde el punto exacto de interrupción si hay desconexiones.</p>
+                                </div>
+                            </div>
+                            <div class="item-arquitectura">
+                                <div class="item-icono">📊</div>
+                                <div>
+                                    <h4>Orquestación en Excel</h4>
+                                    <p>El sistema consume datos desde archivos locales (.xlsx), permitiendo al personal
+                                        gestionar sus cargas de trabajo sin modificar código fuente.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="arquitectura-conclusion">
+                        <div class="tarjeta-conclusion">
+                            <h3>Impacto en el Negocio</h3>
+                            <p>El BotJudicial no solo reemplaza el trabajo manual, sino que transforma el proceso de
+                                cobro judicial y gestión legal en un sistema estructurado, escalable y auditable. Los
+                                datos capturados enriquecen el ecosistema de inteligencia de negocios de la compañía,
+                                permitiendo decisiones basadas en analítica predictiva en lugar de simple operatividad.
+                            </p>
+                            <a href="index.html#contactar" class="boton-principal mt-4">Consultar sobre
+                                implementación</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer
+        style="padding: 2rem 0; text-align: center; border-top: 1px solid rgba(0, 224, 240, 0.1); margin-top: 4rem;">
+        <p class="texto-secundario">© 2026 DataScienceBUM. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
