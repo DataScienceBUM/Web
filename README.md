@@ -1,25 +1,31 @@
-# 🚀 DataScienceBUM - Inteligencia de Datos Estratégica
+# 🚀 Brandon Urroz Mayén - Portafolio Profesional
 
-![DataScienceBUM Banner](https://img.shields.io/badge/Status-En%20Desarrollo-00e0f0?style=for-the-badge)
-![Tech](https://img.shields.io/badge/Tech-HTML5%20%26%20CSS3-orange?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Disponible-00e0f0?style=for-the-badge)
+![Tech](https://img.shields.io/badge/Tech-HTML5%20%26%20CSS3%20%7C%20JavaScript-blue?style=for-the-badge)
 
-**Transformando datos desordenados en decisiones inteligentes.** DataScienceBUM es una plataforma boutique de consultoría en ciencia de datos enfocada en flujos de trabajo automatizados y optimización de ROI.
+**Analista de Datos y Automatizador.** Portafolio web personal enfocado en la visualización de proyectos de ciencia de datos, análisis estratégico y desarrollo de herramientas de automatización de alto impacto.
 
-## ✨ Características Principales
+## ✨ Características del Portafolio
 
-- **Diseño "Deep Space":** Interfaz oscura premium con estética tecnológica minimalista.
-- **Visualización de Datos:** Gráficos SVG interactivos integrados.
-- **Performance:** Carga ultra rápida sin dependencias pesadas.
-- **Responsive:** Adaptado para una lectura impecable en cualquier dispositivo.
+- **Diseño Premium "Deep Space":** Interfaz oscura con estética moderna, micro-animaciones refinadas y navegación glassmorphic adaptativa.
+- **Sección de Métricas Clave:** Cuadrícula interactiva que resume la trayectoria, herramientas clave y logros profesionales.
+- **Narrativa de Evolución de Proyectos:** Enfoque detallado en la transición técnica de herramientas de producción heredadas a servicios modernos (ej. IusTrack v1 a v2).
+- **Formulario de Contacto Directo:** Integración limpia y validada para comunicación profesional vía Web3Forms.
+- **SEO & Accesibilidad:** Código semántico optimizado, metaetiquetas estructuradas y diseño responsive fluido (Mobile First).
 
-## 🛠️ Stack Tecnológico
+## 🛠️ Stack del Portafolio
 
-Nuestra metodología se apoya en las herramientas líderes del mercado:
+- **Estructura y Lógica:** HTML5 semántico y JavaScript vanilla.
+- **Estilos:** CSS3 personalizado con arquitectura de tokens de diseño, transiciones suaves y flexbox/grid responsivo.
+- **Visualización:** Gráficos vectoriales (SVG) responsivos y diagramas de arquitectura interactivos mediante **Mermaid.js**.
 
-- **Análisis de Datos:** Python, R, SQL.
-- **Automatización:** VBA & Office Automation.
-- **Business Intelligence:** PowerBI, Tableau, Excel Avanzado.
+## 📁 Proyectos Destacados
+
+- **IusTrack (Sistema Judicial):** Evolución desde un script automatizado en R / RSelenium [v1.0] a un producto privado con arquitectura API REST en Node.js, Playwright, Express y Docker [v2.0].
+- **Bot Consulta Electoral (TSE):** Automatización de extracción de datos padronales usando R y Python.
+- **PriorityFlow:** Modelado y optimización de flujos de trabajo de prioridad.
+- **PixelGrid & LibrePDF:** Soluciones ligeras de interfaz y procesamiento de documentos.
 
 ---
 
-Desarrollado con ❤️ por **DataScienceBUM**
+Desarrollado con ❤️ por **Brandon Urroz Mayén**
