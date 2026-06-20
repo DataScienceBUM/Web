@@ -4,239 +4,560 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DataScienceBUM - Ciencia de Datos</title>
+    <meta name="description"
+        content="Brandon Urroz Mayén — Analista de Datos y Científico de Datos. Especialista en automatización de procesos, ETL y análisis estadístico en R, Python y SQL.">
+    <title>Brandon Urroz — Analista de Datos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-    <header class="header-principal">
-        <nav class="contenedor-principal">
-            <div>
-                <a href="#" class="inicio">
-                    <h2 class="texto-acento">DATASCIENCE<span class="texto-principal">BUM</span></h2>
+
+    <!-- ===== NAVEGACIÓN ===== -->
+    <header class="header-principal" id="top">
+        <nav class="contenedor-principal nav-inner">
+            <a href="#top" class="logo-nav">
+                BRANDON<span class="acento">.</span>
+            </a>
+            <div class="nav-links">
+                <a href="#sobre-mi" class="enlace-nav">Sobre mí</a>
+                <a href="#habilidades" class="enlace-nav">Habilidades</a>
+                <a href="#proyectos" class="enlace-nav">Proyectos</a>
+                <a href="#contacto" class="enlace-nav">Contacto</a>
+            </div>
+            <div class="nav-actions">
+                <a href="https://github.com/DataScienceBUM" target="_blank" class="btn-outline" id="btn-github-nav">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 .3a12 12 0 0 0-3.79 23.4c.6.1.83-.26.83-.57v-2c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.74-1.33-1.74-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48 1 .1-.78.41-1.31.75-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.26 2.87.12 3.17.77.84 1.23 1.9 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .31.22.68.83.56A12 12 0 0 0 12 .3" />
+                    </svg>
+                    GitHub
                 </a>
+                <a href="https://www.linkedin.com/in/brandon-urroz-mayen-28260b182/" target="_blank" class="btn-outline"
+                    id="btn-linkedin-nav">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.93v5.68H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.59 0 4.25 2.36 4.25 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+                    </svg>
+                    LinkedIn
+                </a>
+                <a href="./Curriculum.pdf" download="Brandon_Urroz_CV.pdf" class="btn-primary" id="btn-cv-nav">Descargar
+                    CV</a>
             </div>
-            <div>
-                <a href="#proyectos" class="enlace-navegacion">Proyectos</a>
-                <a href="#stack" class="enlace-navegacion">Stack</a>
-                <a href="" class="enlace-navegacion">Blog</a>
-            </div>
-            <a href="#contactar" class="boton-principal">Contactar</a>
+
         </nav>
     </header>
+
     <main>
-        <div class="contenedor-principal">
-            <section id="hero" class="hero">
-                <div class="hero-introduccion">
-                    <span class="badge-estado">Sitio web en construcción</span>
-                    <h1>Transformando datos desordenados en <span class="texto-acento">decisiones
-                            inteligentes</span>
-                    </h1>
-                    <p class="texto-secundario">Adaptamos la ciencia de datos a tu negocio, sin
-                        importar el tamaño de la empresa llevamos tu proceso actual hacia flujos de trabajos
-                        automatizados que te permitan tomar decisiones más rápidas y fundamentadas.</p>
-                    <div class="botones-hero">
-                        <a class="boton-principal" href="./assets/Curriculum.pdf" download="Brandon Urroz.pdf">Descargar
-                            CV</a>
-                        <a class="boton-principal" href="#stack">Stack Tecnológico</a>
-                        <a class="boton-secundario" href="https://github.com/DataScienceBUM" target="_blank">Github</a>
-                        <a class="boton-secundario" href="https://www.linkedin.com/in/brandon-urroz-mayen-28260b182/"
-                            target="_blank">LinkedIn</a>
+
+        <!-- ===== HERO ===== -->
+        <section id="hero" class="hero contenedor-principal">
+            <div class="hero-texto">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Disponible para nuevas oportunidades
+                </div>
+                <h1>
+                    Analista de Datos<br>
+                    <span class="acento">& Científico de Datos</span>
+                </h1>
+                <p class="hero-descripcion">
+                    Economista e Ingeniero de Software con experiencia real en la construcción de pipelines ETL,
+                    automatización de procesos (RPA) y análisis estadístico. Transformo datos desordenados en
+                    información estructurada, accionable y de alto impacto.
+                </p>
+                <div class="hero-tech-badges">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">R</span>
+                    <span class="tech-badge">SQL</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">Power BI</span>
+                    <span class="tech-badge">Playwright</span>
+                    <span class="tech-badge">Shiny</span>
+                </div>
+                <div class="hero-ctas">
+                    <a href="#proyectos" class="btn-primary btn-lg" id="btn-proyectos-hero">Ver proyectos</a>
+                    <a href="#contacto" class="btn-outline btn-lg" id="btn-contacto-hero">Contactar</a>
+                </div>
+            </div>
+            <div class="hero-visual" aria-hidden="true">
+                <img src="./assets/crecimiento_ingresos.svg" alt="" class="visual-top">
+                <img src="./assets/actividad_nodos.svg" alt="" class="visual-bottom">
+            </div>
+        </section>
+
+        <!-- ===== SOBRE MÍ ===== -->
+        <section id="sobre-mi" class="sobre-mi contenedor-principal">
+            <div class="seccion-header">
+                <span class="seccion-label">Sobre mí</span>
+                <h2>Una combinación poco común: <span class="acento">economía + código</span></h2>
+            </div>
+            <div class="sobre-mi-grid">
+                <div class="perfil-card">
+                    <div class="perfil-avatar">BU</div>
+                    <div class="perfil-info">
+                        <h3>Brandon Urroz Mayén</h3>
+                        <p class="perfil-titulo">Analista de Datos · Automatización · RPA</p>
+                        <p class="perfil-descripcion">
+                            Economista graduado de la Universidad Fidelitas e Ingeniero de Software en formación en
+                            CENFOTEC. Actualmente trabajo como Analista de Datos en Invercom, donde diseño pipelines
+                            ETL, automatizo flujos de trabajo con R y JavaScript, y desarrollo ecosistemas de reportería
+                            avanzada con Power BI y MySQL.
+                        </p>
+                        <p class="perfil-descripcion">
+                            Mi valor diferencial es entender el problema de negocio antes de escribir una línea de
+                            código, lo que me permite construir soluciones técnicas que realmente impactan los
+                            resultados.
+                        </p>
+                        <div class="perfil-links">
+                            <a href="https://github.com/DataScienceBUM" target="_blank" class="perfil-link"
+                                id="link-github-perfil">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 .3a12 12 0 0 0-3.79 23.4c.6.1.83-.26.83-.57v-2c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.74-1.33-1.74-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48 1 .1-.78.41-1.31.75-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.26 2.87.12 3.17.77.84 1.23 1.9 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .31.22.68.83.56A12 12 0 0 0 12 .3" />
+                                </svg>
+                                GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/brandon-urroz-mayen-28260b182/" target="_blank"
+                                class="perfil-link" id="link-linkedin-perfil">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.93v5.68H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.59 0 4.25 2.36 4.25 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+                                </svg>
+                                LinkedIn
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="hero-imagenes">
-                    <img src="./assets/actividad_nodos.svg" alt="Actividad de nodos neurales" class="actividad-nodos">
-                    <img src="./assets/crecimiento_ingresos.svg" alt="Gráfico de crecimiento de ingresos"
-                        class="crecimiento-ingresos">
+                <div class="metricas-grid">
+                    <div class="metrica-card">
+                        <span class="metrica-numero">3+</span>
+                        <span class="metrica-label">Años de experiencia en datos</span>
+                    </div>
+                    <div class="metrica-card">
+                        <span class="metrica-numero">2</span>
+                        <span class="metrica-label">Años en finanzas y administración corporativa</span>
+                    </div>
+                    <div class="metrica-card">
+                        <span class="metrica-numero">5+</span>
+                        <span class="metrica-label">Proyectos de automatización publicados</span>
+                    </div>
+                    <div class="metrica-card">
+                        <span class="metrica-numero">4</span>
+                        <span class="metrica-label">Lenguajes de programación dominados</span>
+                    </div>
+                    <div class="metrica-card">
+                        <span class="metrica-numero">2</span>
+                        <span class="metrica-label">Titulaciones académicas y 1 en proceso</span>
+                    </div>
                 </div>
-            </section>
-            <section id="proyectos" class="proyectos">
-                <div class="proyectos-contenido">
-                    <h2>Proyectos</h2>
-                    <p class="texto-secundario">Soluciones tecnológicas diseñadas para resolver desafíos operativos
-                        reales. Desde la automatización integral de procesos hasta la generación de analítica avanzada,
-                        nuestros proyectos están enfocados en optimizar tu tiempo, maximizar la eficiencia de tu equipo
-                        y brindarte los datos exactos que necesitas para tomar decisiones estratégicas.</p>
+            </div>
+        </section>
+
+        <!-- ===== HABILIDADES ===== -->
+        <section id="habilidades" class="habilidades contenedor-principal">
+            <div class="seccion-header">
+                <span class="seccion-label">Stack técnico</span>
+                <h2>Herramientas que <span class="acento">domino</span> en producción</h2>
+            </div>
+            <div class="habilidades-categorias">
+
+                <div class="categoria-habilidad">
+                    <h4 class="categoria-titulo">
+                        <span class="categoria-icono">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="16 18 22 12 16 6" />
+                                <polyline points="8 6 2 12 8 18" />
+                            </svg>
+                        </span>
+                        Lenguajes de Programación
+                    </h4>
+                    <div class="habilidades-items">
+                        <div class="habilidad-item">
+                            <img src="./assets/r.svg" alt="R">
+                            <div>
+                                <strong>R</strong>
+                                <p>Análisis estadístico, RSelenium, Shiny Apps, Tidyverse, ETL</p>
+                            </div>
+                        </div>
+                        <div class="habilidad-item">
+                            <img src="./assets/python.svg" alt="Python">
+                            <div>
+                                <strong>Python</strong>
+                                <p>Pandas, automatización, integración con Excel (xlwings, openpyxl)</p>
+                            </div>
+                        </div>
+                        <div class="habilidad-item">
+                            <img src="./assets/sql.svg" alt="SQL">
+                            <div>
+                                <strong>SQL</strong>
+                                <p>MySQL, SQLite, consultas analíticas, modelado de datos</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="lista-proyectos">
-                    <div class="proyecto-estrella">
-                        <h3 class="nombre-proyecto">Bot Poder Judicial</h3>
-                        <a href="https://pjenlinea.poder-judicial.go.cr/GestionEnLinea/inicio/tramitesfrecuentes"
-                            target="_blank" class="logo-proyecto"><img src="./assets/logo-poder-judicial.png"
-                                alt="Logo del Poder Judicial"></a>
-                        <div class="aspecto-proyecto">
-                            <h4 class="titulo-aspecto">Automatización Robótica (RPA)</h4>
-                            <p class="contenido-aspecto">Desarrollo integral con RSelenium para interactuar con el portal judicial, simulando navegación humana. Permite el inicio de sesión, extracción masiva de datos (scraping) y diligenciamiento de formularios complejos con alta fidelidad, asumiendo las tareas manuales y repetitivas del equipo.</p>
+
+                <div class="categoria-habilidad">
+                    <h4 class="categoria-titulo">
+                        <span class="categoria-icono">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="3" y="3" width="7" height="7" />
+                                <rect x="14" y="3" width="7" height="7" />
+                                <rect x="14" y="14" width="7" height="7" />
+                                <rect x="3" y="14" width="7" height="7" />
+                            </svg>
+                        </span>
+                        Business Intelligence & Análisis
+                    </h4>
+                    <div class="habilidades-items">
+                        <div class="habilidad-item">
+                            <img src="./assets/powerbi.svg" alt="Power BI">
+                            <div>
+                                <strong>Power BI</strong>
+                                <p>DAX, Power Query, dashboards interactivos, modelado dimensional</p>
+                            </div>
                         </div>
-                        <div class="aspecto-proyecto">
-                            <h4 class="titulo-aspecto">Flujos de Trabajo Inteligentes</h4>
-                            <p class="contenido-aspecto">Desde la descarga masiva de expedientes hasta la automatización completa para presentar demandas nuevas. El bot cuenta con un proceso ETL que procesa, limpia y estructura datos vitales, sincronizándolos con una base de datos MySQL para generar reportes precisos en tiempo real.</p>
+                        <div class="habilidad-item">
+                            <img src="./assets/tableau.svg" alt="Tableau">
+                            <div>
+                                <strong>Tableau</strong>
+                                <p>Visualización de datos, reportes ejecutivos</p>
+                            </div>
                         </div>
-                        <div class="aspecto-proyecto">
-                            <h4 class="titulo-aspecto">Arquitectura Resiliente y Accesible</h4>
-                            <p class="contenido-aspecto">Diseñado para ser altamente flexible y evitar la pérdida de información mediante un sistema de "checkpoints" que guarda el progreso ante cualquier fallo de conexión. Además, su orquestación es amigable: el personal gestiona las prioridades de trabajo utilizando simples hojas de cálculo de Excel, sin necesidad de interactuar con el código.</p>
+                        <div class="habilidad-item">
+                            <img src="./assets/excel.svg" alt="Excel">
+                            <div>
+                                <strong>Excel Avanzado & VBA</strong>
+                                <p>Macros, automatización de reportes, tablas dinámicas avanzadas</p>
+                            </div>
                         </div>
-                        <a href="bot-judicial.html" class="proyecto-ver-mas">Ver más</a>
                     </div>
-                    <div class="proyecto">
-                        <h3 class="nombre-proyecto">Bot TSE</h3>
-                        <a href="https://servicioselectorales.tse.go.cr/chc/consulta_cedula.aspx" target="_blank"
-                            class="logo-proyecto"><img src="https://www.tse.go.cr/imgs/iconos/logo-TSE.svg"
-                                alt="Logo del Proyecto"></a>
-                        <div class="aspecto-proyecto">
-                            <h4 class="titulo-aspecto">Del papel a lo digital</h4>
-                            <p class="contenido-aspecto">En el sector de seguros, la emisión de pólizas de riesgo
-                                requiere una verificación exhaustiva y precisa de la identidad de los asegurados y sus
-                                beneficiarios. Tradicionalmente, la recepción de esta información se da mediante insumos
-                                físicos, lo que genera cuellos de botella operativos en la digitalización y expone a los
-                                procesos a errores humanos de digitación o inconsistencias legales. El alto costo de los
-                                reprocesos y el riesgo de fraude hacen que la validación manual de estos expedientes sea
-                                insostenible y poco segura.</p>
+                </div>
+
+                <div class="categoria-habilidad">
+                    <h4 class="categoria-titulo">
+                        <span class="categoria-icono">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                            </svg>
+                        </span>
+                        Automatización & RPA
+                    </h4>
+                    <div class="habilidades-items">
+                        <div class="habilidad-item">
+                            <div class="habilidad-icon-text">PW</div>
+                            <div>
+                                <strong>Playwright</strong>
+                                <p>Automatización de navegadores, scraping avanzado, Node.js</p>
+                            </div>
                         </div>
-                        <div class="aspecto-proyecto">
-                            <h4 class="titulo-aspecto">Información confiable </h4>
-                            <p class="contenido-aspecto">Es un proceso de digitalización y verificación automatizada
-                                diseñado para resolver este desafío. El desarrollo transforma los insumos físicos en
-                                datos estructurados y los audita directamente contra la base de datos del Tribunal
-                                Supremo de Elecciones (TSE). La herramienta corrobora la validez de las cédulas de
-                                identidad nacionales, cruzando y validando que los nombres brindados, tanto de titulares
-                                como de beneficiarios, concuerden de manera exacta con los registros oficiales,
-                                garantizando un proceso seguro, rápido y 100% confiable.</p>
+                        <div class="habilidad-item">
+                            <div class="habilidad-icon-text">RS</div>
+                            <div>
+                                <strong>RSelenium</strong>
+                                <p>Automatización web con R, Page Object Model, procesos por lotes</p>
+                            </div>
                         </div>
-                        <a href="https://github.com/DataScienceBUM/BotConsultaCivilesCR" target="_blank"
-                            class="proyecto-ver-mas">Ver más
-                        </a>
+                        <div class="habilidad-item">
+                            <img src="./assets/vba.svg" alt="VBA">
+                            <div>
+                                <strong>VBA & Office Automation</strong>
+                                <p>Integración Python-Excel, flujos de trabajo automatizados</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="proyecto">
-                        <h3 class="nombre-proyecto">PriorityFlow Python-Excel</h3>
-                        <a href="#" target="_blank" class="logo-proyecto"><img src="./assets/pyexcel.png"
-                                alt="Logo del Proyecto"></a>
-                        <div class="aspecto-proyecto">
-                            <h4 class="titulo-aspecto">Reforzando el poder de Excel</h4>
-                            <p class="contenido-aspecto">PriorityFlow Python-Excel es un proceso de automatización
-                                avanzado que integra la potencia analítica de Python directamente en tu entorno de
-                                Excel, operando con la misma agilidad y transparencia que una macro nativa. Este
-                                desarrollo ejecuta de extremo a extremo la actualización de matrices de datos, genera
-                                clasificaciones dinámicas por prioridad y ordena de forma inteligente la carga de
-                                trabajo para su asignación a gestores, maximizando la eficiencia operativa sin abandonar
-                                la interfaz que tu equipo ya conoce.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== PROYECTOS ===== -->
+        <section id="proyectos" class="proyectos contenedor-principal">
+            <div class="seccion-header">
+                <span class="seccion-label">Portafolio</span>
+                <h2>Proyectos en <span class="acento">producción</span></h2>
+                <p class="seccion-descripcion">Soluciones desarrolladas para resolver problemas reales, desde la
+                    extracción y estructuración de datos hasta la automatización completa de procesos operativos.</p>
+                <div class="proyecto-destacado">
+                    <div class="proyecto-destacado-contenido">
+                        <div class="proyecto-destacado-meta">
+                            <span class="proyecto-tag">Proyecto Insignia</span>
+                            <span class="proyecto-tag proyecto-tag-iustrack">
+                                <span class="iustrack-dot"></span>IusTrack · En desarrollo
+                            </span>
                         </div>
-                        <div class="aspecto-proyecto">
-                            <h4 class="titulo-aspecto">¿Por qué Excel?</h4>
-                            <p class="contenido-aspecto">Excel es un estándar indiscutible en el entorno corporativo,
-                                operado por usuarios de todos los niveles técnicos. Entendiendo que la migración de los
-                                equipos hacia nuevas plataformas implica altos costos de transición y complejas curvas
-                                de aprendizaje, hemos optado por una solución más estratégica: llevar la potencia de
-                                Python directamente a la hoja de cálculo. De esta manera, el usuario interactúa con un
-                                entorno familiar y ejecuta procesos con la simplicidad de una macro tradicional, pero
-                                respaldado por la capacidad de procesamiento avanzado de Python.</p>
+                        <h3>Sistema Judicial <span class="acento">— IusTrack</span></h3>
+                        <p>
+                            Nació como un bot monolítico en R (v1.0, actualmente en producción) y está evolucionando
+                            hacia
+                            <strong>IusTrack</strong>: un producto privado de software construido como una <strong>API
+                                REST
+                                multi-instancia</strong> con Node.js y Playwright. El rediseño transforma un script de
+                            automatización en un sistema que puede servir a múltiples usuarios en simultáneo con
+                            endpoints
+                            documentados y arquitectura orientada a servicios.
+                        </p>
+
+                        <div class="version-stack">
+                            <div class="version-row">
+                                <span class="version-pill v1">v1.0 · Producción</span>
+                                <div class="proyecto-badges">
+                                    <span class="badge">R</span>
+                                    <span class="badge">RSelenium</span>
+                                    <span class="badge">MySQL</span>
+                                    <span class="badge">Tidyverse</span>
+                                </div>
+                            </div>
+                            <div class="version-arrow">↓ migración en curso</div>
+                            <div class="version-row">
+                                <span class="version-pill v2">v2.0 · IusTrack</span>
+                                <div class="proyecto-badges">
+                                    <span class="badge">Node.js</span>
+                                    <span class="badge">Playwright</span>
+                                    <span class="badge">Express</span>
+                                    <span class="badge">SQLite</span>
+                                    <span class="badge">OpenAPI 3.1</span>
+                                    <span class="badge">Docker</span>
+                                </div>
+                            </div>
                         </div>
-                        <a href="" class="proyecto-ver-mas">Ver más</a>
+
+                        <ul class="proyecto-features">
+                            <li><span class="feature-v1">v1</span> Extracción de partes, retenciones, documentos y
+                                autorizaciones por lote</li>
+                            <li><span class="feature-v1">v1</span> Checkpoints con <code>saveRDS()</code> y pipeline ETL
+                                hacia MySQL</li>
+                            <li><span class="feature-v2">v2</span> API REST multi-instancia — N usuarios procesando
+                                expedientes en paralelo</li>
+                            <li><span class="feature-v2">v2</span> Workflows atómicos <code>POST /workflow/full</code>
+                                con especificación OpenAPI 3.1</li>
+                        </ul>
+
+                        <div class="proyecto-actions">
+                            <a href="bot-judicial.html" class="btn-outline" id="btn-bot-judicial">Ver arquitectura
+                                v1</a>
+                            <span class="btn-iustrack" id="btn-iustrack-badge">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                                </svg>
+                                IusTrack · Producto privado
+                            </span>
+                        </div>
                     </div>
-                    <div class="proyecto">
-                        <h3 class="nombre-proyecto">Contador PixelGrid</h3>
-                        <a href="http://contadorpixelgrid.datasciencebum.com/" target="_blank"
-                            class="logo-proyecto"><img src="./assets/pixelgrid_logo.png"
-                                alt="Logo de Contador PixelGrid"></a>
-                        <div class="aspecto-proyecto">
-                            <h4 class="titulo-aspecto">Extracción de colores para Minecraft</h4>
-                            <p class="contenido-aspecto">Contador PixelGrid es una herramienta que extrae y cuenta los
-                                colores de cualquier imagen aplicando una cuadrícula. Su uso está enfocado
-                                principalmente en la construcción de murales y proyectos artísticos dentro de Minecraft,
-                                facilitando a los creadores la traducción de imágenes a bloques del juego.</p>
+                    <div class="proyecto-destacado-logo" aria-hidden="true">
+                        <img src="./assets/logo-poder-judicial.png" alt="Logo Poder Judicial">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid de otros proyectos -->
+            <div class="proyectos-grid">
+
+                <div class="proyecto-card" id="card-bot-tse">
+                    <div class="proyecto-card-header">
+                        <div class="proyecto-card-logo">
+                            <img src="https://www.tse.go.cr/imgs/iconos/logo-TSE.svg" alt="Logo TSE"
+                                onerror="this.style.display='none'">
                         </div>
-                        <div class="aspecto-proyecto">
-                            <h4 class="titulo-aspecto">Potenciado por Inteligencia Artificial</h4>
-                            <p class="contenido-aspecto">Este proyecto demuestra el gran impacto de la Inteligencia
-                                Artificial en el desarrollo de software actual. Fue concebido, estructurado y programado
-                                utilizando agentes de Inteligencia Artificial, acelerando significativamente la creación
-                                de una solución útil, interactiva y robusta.</p>
+                        <span class="proyecto-card-tag">Automatización</span>
+                    </div>
+                    <h4>Bot TSE — Verificación de Identidad</h4>
+                    <p>Digitalización y verificación automatizada de cédulas nacionales contra la base de datos del
+                        Tribunal Supremo de Elecciones. Elimina errores de digitación y garantiza la validez legal de
+                        los datos en emisión de pólizas de seguros.</p>
+                    <div class="proyecto-badges">
+                        <span class="badge">R</span>
+                        <span class="badge">RSelenium</span>
+                        <span class="badge">Web Scraping</span>
+                    </div>
+                    <a href="https://github.com/DataScienceBUM/BotConsultaCivilesCR" target="_blank"
+                        class="proyecto-card-link" id="link-bot-tse">
+                        Ver en GitHub
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <polyline points="15 3 21 3 21 9" />
+                            <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="proyecto-card" id="card-priorityflow">
+                    <div class="proyecto-card-header">
+                        <div class="proyecto-card-logo">
+                            <img src="./assets/pyexcel.png" alt="Python Excel">
                         </div>
+                        <span class="proyecto-card-tag">Analítica</span>
+                    </div>
+                    <h4>PriorityFlow Python‑Excel</h4>
+                    <p>Automatización analítica que integra la potencia de Python directamente en Excel. Actualiza
+                        matrices de datos, genera clasificaciones dinámicas por prioridad y asigna cargas de trabajo a
+                        gestores, todo desde la interfaz familiar del equipo operativo.</p>
+                    <div class="proyecto-badges">
+                        <span class="badge">Python</span>
+                        <span class="badge">Excel</span>
+                        <span class="badge">VBA</span>
+                        <span class="badge">xlwings</span>
+                    </div>
+                    <span class="proyecto-card-link disabled">En desarrollo privado</span>
+                </div>
+
+                <div class="proyecto-card" id="card-pixelgrid">
+                    <div class="proyecto-card-header">
+                        <div class="proyecto-card-logo">
+                            <img src="./assets/pixelgrid_logo.png" alt="Contador PixelGrid">
+                        </div>
+                        <span class="proyecto-card-tag">Herramienta Web</span>
+                    </div>
+                    <h4>Contador PixelGrid</h4>
+                    <p>Aplicación web interactiva que analiza imágenes pixel art aplicando una cuadrícula configurable.
+                        Mapea la distribución de colores con heurísticas matemáticas y genera una visualización
+                        volumétrica 3D navegable con Three.js para construcción en Minecraft.</p>
+                    <div class="proyecto-badges">
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">HTML5 Canvas</span>
+                        <span class="badge">Three.js</span>
+                    </div>
+                    <div class="proyecto-card-actions">
                         <a href="https://github.com/DataScienceBUM/Contador-PixelGrid" target="_blank"
-                            class="proyecto-ver-mas">Ver más
-                        </a>
+                            class="proyecto-card-link" id="link-pixelgrid-github">GitHub</a>
+                        <a href="http://contadorpixelgrid.datasciencebum.com/" target="_blank"
+                            class="proyecto-card-link acento" id="link-pixelgrid-demo">Demo live →</a>
                     </div>
-                    <div class="proyecto">
-                        <h3 class="nombre-proyecto">FreePDF | Herramienta de Gestión Documental</h3>
+                </div>
+
+                <div class="proyecto-card" id="card-librepdf">
+                    <div class="proyecto-card-header">
+                        <div class="proyecto-card-logo">
+                            <img src="./assets/librepdf.png" alt="LibrePDF">
+                        </div>
+                        <span class="proyecto-card-tag">App Web</span>
+                    </div>
+                    <h4>LibrePDF — Gestión Documental</h4>
+                    <p>Aplicación web de código abierto para la edición y manipulación de archivos PDF (unir, dividir y
+                        rotar). Desarrollada en R con Shiny y bslib, ofrece procesamiento local garantizando la
+                        privacidad total de los documentos sensibles.</p>
+                    <div class="proyecto-badges">
+                        <span class="badge">R</span>
+                        <span class="badge">Shiny</span>
+                        <span class="badge">bslib</span>
+                        <span class="badge">qpdf</span>
+                    </div>
+                    <div class="proyecto-card-actions">
+                        <a href="https://github.com/DataScienceBUM/FreePDF" target="_blank" class="proyecto-card-link"
+                            id="link-librepdf-github">GitHub</a>
                         <a href="https://datascience-bum.shinyapps.io/FreePDF/" target="_blank"
-                            class="logo-proyecto"><img src="./assets/librepdf.png" alt="Logo de FreePDF"></a>
-                        <div class="aspecto-proyecto">
-                            <h4 class="titulo-aspecto">Edición y manipulación web</h4>
-                            <p class="contenido-aspecto">Aplicación web de código abierto para la edición y manipulación
-                                de archivos PDF (unir, dividir, rotar y proteger) desarrollada íntegramente en R ci</p>
-                        </div>
-                        <div class="aspecto-proyecto">
-                            <h4 class="titulo-aspecto">Privacidad garantizada</h4>
-                            <p class="contenido-aspecto">Elimina la dependencia de herramientas premium o sitios web que
-                                comprometen la privacidad de los datos al procesar documentos sensibles.</p>
-                        </div>
-                        <a href="https://github.com/DataScienceBUM/FreePDF" target="_blank" class="proyecto-ver-mas">Ver
-                            más</a>
+                            class="proyecto-card-link acento" id="link-librepdf-demo">Demo live →</a>
                     </div>
                 </div>
-            </section>
-            <section id="stack" class="contenedor-stack">
-                <h2>Nuestra gama de herramientas</h2>
-                <div class="herramientas-contenedor">
-                    <span class="herramientas"><img src="./assets/r.svg" alt="R">R </span>
-                    <span class="herramientas"><img src="./assets/sql.svg" alt="SQL">SQL</span>
-                    <span class="herramientas"><img src="./assets/excel.svg" alt="Excel">Excel</span>
-                    <span class="herramientas"><img src="./assets/python.svg" alt="Python">Python</span>
-                    <span class="herramientas"><img src="./assets/powerbi.svg" alt="PowerBI">PowerBI</span>
-                    <span class="herramientas"><img src="./assets/tableau.svg" alt="Tableau">Tableau</span>
-                    <span class="herramientas"><img src="./assets/vba.svg" alt="Visual Basic for Application">VBA</span>
-                </div>
-            </section>
-            <section id="contactar" class="contactar">
-                <h2 class="texto-principal">¿Quieres saber más? <span class="texto-acento">¡Hablemos!</span></h2>
-                
-                <div class="contacto-contenedor">
-                    <div class="tarjeta-contacto">
-                        <div class="item-contacto">
-                            <div class="icono-contacto">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            </div>
-                            <div class="detalles-contacto">
-                                <h3>Correo Electrónico</h3>
-                                <p>contacto@datasciencebum.com</p>
-                            </div>
+
+            </div>
+        </section>
+
+        <!-- ===== CONTACTO ===== -->
+        <section id="contacto" class="contacto contenedor-principal">
+            <div class="seccion-header">
+                <span class="seccion-label">Contacto</span>
+                <h2>¿Tienes un proyecto? <span class="acento">Hablemos.</span></h2>
+                <p class="seccion-descripcion">Estoy disponible para proyectos freelance, roles a tiempo completo o
+                    conversaciones sobre analítica de datos y automatización.</p>
+            </div>
+            <div class="contacto-grid">
+                <div class="contacto-info">
+                    <div class="contacto-item">
+                        <div class="contacto-icono">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
                         </div>
-                        <div class="item-contacto">
-                            <div class="icono-contacto">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                            </div>
-                            <div class="detalles-contacto">
-                                <h3>Teléfono</h3>
-                                <p>61797566</p>
-                            </div>
+                        <div>
+                            <p class="contacto-label">Correo electrónico</p>
+                            <a href="mailto:contacto@datasciencebum.com"
+                                class="contacto-valor">contacto@datasciencebum.com</a>
                         </div>
                     </div>
-
-                    <!-- IMPORTANTE: Usa Web3Forms. Reemplaza TU_ACCESS_KEY por la clave que recibas en tu correo -->
-                    <form class="formulario-contacto" action="https://api.web3forms.com/submit" method="POST">
-                        <!-- Clave de acceso (Access Key) -->
-                        <input type="hidden" name="access_key" value="c7ef1fc7-6cf0-4f5f-9ef7-fff1a53418a6">
-                        <!-- Opcional: Esto evita que validen con captcha molestos en exceso -->
-                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-                        
-                        <label for="correo">Correo</label>
-                        <input type="email" id="correo" name="correo" placeholder="tu@correo.com" required>
-                        
-                        <label for="telefono">Teléfono</label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="Tu número">
-
+                    <div class="contacto-item">
+                        <div class="contacto-icono">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="contacto-label">Teléfono</p>
+                            <a href="tel:+50661797566" class="contacto-valor">+506 6179-7566</a>
+                        </div>
+                    </div>
+                    <div class="contacto-item">
+                        <div class="contacto-icono">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.93v5.68H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.59 0 4.25 2.36 4.25 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="contacto-label">LinkedIn</p>
+                            <a href="https://www.linkedin.com/in/brandon-urroz-mayen-28260b182/" target="_blank"
+                                class="contacto-valor" id="link-linkedin-contacto">Brandon Urroz Mayén</a>
+                        </div>
+                    </div>
+                </div>
+                <form class="formulario-contacto" action="https://api.web3forms.com/submit" method="POST"
+                    id="form-contacto">
+                    <input type="hidden" name="access_key" value="c7ef1fc7-6cf0-4f5f-9ef7-fff1a53418a6">
+                    <input type="checkbox" name="botcheck" style="display:none">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="correo">Correo</label>
+                            <input type="email" id="correo" name="correo" placeholder="tu@correo.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="asunto">Asunto</label>
+                        <input type="text" id="asunto" name="asunto" placeholder="¿Sobre qué quieres hablar?" required>
+                    </div>
+                    <div class="form-group">
                         <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" placeholder="¿En qué te puedo ayudar?" rows="4" style="width: 100%; padding: 1rem; border-radius: 10px; border: 1px solid rgba(0, 224, 240, 0.2); background: rgba(255, 255, 255, 0.05); color: #f8fafc; font-size: 1rem; outline: none; box-sizing: border-box; resize: vertical;" required></textarea>
+                        <textarea id="mensaje" name="mensaje" placeholder="Cuéntame sobre tu proyecto o consulta..."
+                            rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary btn-submit" id="btn-enviar-formulario">Enviar
+                        mensaje</button>
+                </form>
+            </div>
+        </section>
 
-                        <button type="submit" class="boton-principal btn-enviar">Enviar Mensaje</button>
-                    </form>
-                </div>
-            </section>
     </main>
-    <footer></footer>
-    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="contenedor-principal footer-inner">
+            <span class="footer-nombre">Brandon Urroz Mayén <span class="acento">·</span> Analista de Datos</span>
+            <div class="footer-links">
+                <a href="https://github.com/DataScienceBUM" target="_blank" id="link-github-footer">GitHub</a>
+                <a href="https://www.linkedin.com/in/brandon-urroz-mayen-28260b182/" target="_blank"
+                    id="link-linkedin-footer">LinkedIn</a>
+            </div>
+            <span class="footer-copy">© 2026 Brandon Urroz Mayén. Todos los derechos reservados.</span>
+        </div>
+    </footer>
+
 </body>
 
 </html>

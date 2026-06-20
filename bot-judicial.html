@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bot Judicial - DataScienceBUM</title>
+    <title>Sistema Judicial — IusTrack | Brandon Urroz</title>
     <link rel="stylesheet" href="./styles.css">
     <script type="module">
         import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
@@ -44,14 +44,13 @@
         <div class="contenedor-principal">
             <section class="detalle-hero">
                 <div class="detalle-hero-texto">
-                    <span class="badge-estado">Automatización con R</span>
-                    <h1>Bot<span class="texto-acento">Judicial</span></h1>
+                    <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1.2rem;">
+                        <span class="badge-estado">v1.0 · R & RSelenium · En producción</span>
+                        <span class="badge-estado" style="color:#a78bfa; background:rgba(167,139,250,0.1); border-color:rgba(167,139,250,0.25);">IusTrack v2.0 · En desarrollo</span>
+                    </div>
+                    <h1>Sistema Judicial <span class="texto-acento">— IusTrack</span></h1>
                     <p class="texto-secundario texto-destacado">
-                        Una solución avanzada de Automatización Robótica de Procesos (RPA) desarrollada íntegramente en
-                        lenguaje R.
-                        Su objetivo principal es interactuar de manera automatizada con el portal web del sistema
-                        judicial,
-                        simulando la interacción humana con alta fidelidad mediante RSelenium.
+                        Nació como un bot monolítico en R (v1.0) para automatizar consultas al Poder Judicial de Costa Rica. Hoy está siendo reescrito como <strong style="color:#f1f5f9;">IusTrack</strong>: una API REST multi-instancia con Node.js y Playwright que convierte el sistema en un producto de software con endpoints documentados y capacidad multi-usuario.
                     </p>
                 </div>
                 <div class="detalle-hero-imagen">
@@ -59,9 +58,78 @@
                 </div>
             </section>
 
+            <!-- NUEVA SECCIÓN: Evolución del sistema -->
+            <section class="seccion-arquitectura" style="padding-top: 0;">
+                <h2>Sistema en <span class="texto-acento">Evolución</span></h2>
+                <p class="texto-secundario" style="margin-bottom:2rem;">La v1.0 funcionó en producción y validó la solución. La v2.0 (IusTrack) reescribe la arquitectura para convertirla en un producto escalable orientado a servicios.</p>
+
+                <div class="arquitectura-grid" style="grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top:0;">
+                    <!-- v1 -->
+                    <div class="tarjeta-conclusion">
+                        <h3 style="font-size:1.1rem;">v1.0 · Bot Monolítico (R)</h3>
+                        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; padding:0; margin:0;">
+                            <li style="font-size:0.88rem; color:#94a3b8;">✓ Script R + RSelenium</li>
+                            <li style="font-size:0.88rem; color:#94a3b8;">✓ 1 instancia por ejecución</li>
+                            <li style="font-size:0.88rem; color:#94a3b8;">✓ Orquestación vía Excel</li>
+                            <li style="font-size:0.88rem; color:#94a3b8;">✓ ETL hacia MySQL</li>
+                            <li style="font-size:0.88rem; color:#94a3b8;">✓ Checkpoints con <code style="background:rgba(var(--acento-rgb),0.1);color:var(--acento);padding:1px 5px;border-radius:3px;">saveRDS()</code></li>
+                            <li style="font-size:0.88rem; color:#64748b;">✗ Sin API / sin multi-usuario</li>
+                        </ul>
+                    </div>
+                    <!-- v2 -->
+                    <div class="tarjeta-conclusion" style="background:linear-gradient(145deg,rgba(167,139,250,0.08) 0%,rgba(10,20,22,0.8) 100%); border-color:rgba(167,139,250,0.25);">
+                        <h3 style="color:#a78bfa; font-size:1.1rem;">v2.0 · IusTrack (Node.js)</h3>
+                        <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; padding:0; margin:0;">
+                            <li style="font-size:0.88rem; color:#94a3b8;">✓ API REST con Express.js</li>
+                            <li style="font-size:0.88rem; color:#94a3b8;">✓ Multi-instancia (N usuarios en paralelo)</li>
+                            <li style="font-size:0.88rem; color:#94a3b8;">✓ Autenticación por API Key</li>
+                            <li style="font-size:0.88rem; color:#94a3b8;">✓ Playwright (headless, v. moderna)</li>
+                            <li style="font-size:0.88rem; color:#94a3b8;">✓ SQLite + esquema transaccional</li>
+                            <li style="font-size:0.88rem; color:#94a3b8;">✓ Especificación OpenAPI 3.1</li>
+                            <li style="font-size:0.88rem; color:#94a3b8;">✓ Docker-ready</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Diagrama v2: Arquitectura API IusTrack -->
+                <h3 style="margin-top:2.5rem; margin-bottom:0.5rem;">Arquitectura v2.0 — <span class="texto-acento">IusTrack API</span></h3>
+                <p class="texto-secundario" style="margin-bottom:1rem;">Modelo multi-instancia: cada usuario de la API puede tener múltiples sesiones de bot corriendo en paralelo, identificadas por su usuario del portal judicial.</p>
+                <div class="diagrama-contenedor">
+                    <div class="mermaid">
+graph LR
+    Client["Cliente (HTTP)"]
+    Auth["Middleware\nAPI Key"]
+    Router["Express Router\n/api/*"]
+    BM["BotManager\n(Pool de instancias)"]
+    DB[("SQLite\nHistorial")]
+    B1["Bot Instance A\nPlaywright"]
+    B2["Bot Instance B\nPlaywright"]
+    Portal["Portal PJ\nIusTrack"]
+
+    Client -- "X-API-Key" --> Auth
+    Auth --> Router
+    Router -- "/session\n/expediente\n/workflow" --> BM
+    BM --> DB
+    BM --> B1
+    BM --> B2
+    B1 --> Portal
+    B2 --> Portal
+
+    style Client fill:#1e293b,color:#f1f5f9,stroke:#475569
+    style Auth fill:#312e81,color:#c7d2fe,stroke:#6366f1
+    style Router fill:#1e293b,color:#f1f5f9,stroke:#475569
+    style BM fill:#1e1b4b,color:#a78bfa,stroke:#7c3aed
+    style DB fill:#0f172a,color:#64748b,stroke:#334155
+    style B1 fill:#064e3b,color:#6ee7b7,stroke:#059669
+    style B2 fill:#064e3b,color:#6ee7b7,stroke:#059669
+    style Portal fill:#1e293b,color:#94a3b8,stroke:#334155
+                    </div>
+                </div>
+            </section>
+
             <section class="seccion-diagrama">
-                <h2>Arquitectura y <span class="texto-acento">Flujo de Trabajo</span></h2>
-                <p class="texto-secundario">El proyecto exhibe un nivel de madurez arquitectónica notable, separando la
+                <h2>Arquitectura v1.0 — <span class="texto-acento">Flujo de Trabajo</span></h2>
+                <p class="texto-secundario">El bot v1.0 exhibe un nivel de madurez arquitectónica notable, separando la
                     lógica de navegación de los flujos de negocio.</p>
                 <div class="diagrama-contenedor">
                     <div class="mermaid">
@@ -231,7 +299,7 @@
 
     <footer
         style="padding: 2rem 0; text-align: center; border-top: 1px solid rgba(0, 224, 240, 0.1); margin-top: 4rem;">
-        <p class="texto-secundario">© 2026 DataScienceBUM. Todos los derechos reservados.</p>
+        <p class="texto-secundario">© 2026 Brandon Urroz Mayén. Todos los derechos reservados.</p>
     </footer>
 </body>
 
